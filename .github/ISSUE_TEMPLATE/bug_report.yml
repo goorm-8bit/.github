@@ -18,7 +18,7 @@ body:
       options:
         - label: 동일한 버그에 대한 이슈가 이미 존재하는지
           required: true
-        - label: 최신 버전을 사용하고 있는진
+        - label: 최신 버전을 사용하고 있는지
           required: true
 
   - type: textarea
