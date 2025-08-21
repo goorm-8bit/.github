@@ -1,49 +1,56 @@
 name: ♻️ Refactor
-description: 코드 리팩토링을 위한 템플릿
-title: "[Refactor] "
+description: 기능 변화 없이 코드를 수정합니다. (코드 구조 개선, 가독성 향상 등)
+title: "[REFACTOR] "
 labels:
   - ♻️ refactor
 body:
   - type: markdown
     attributes:
       value: |
-        ## 리팩토링
-        코드 리팩토링에 대한 정보를 작성해주세요. 리팩토링은 외부 동작을 변경하지 않으면서 내부 구조를 개선하는 작업입니다.
+        ---
+        ### 이슈를 작성하기 전에 아래 내용을 확인해주세요:
+        - 동일한 작업에 대한 이슈가 없음을 확인했습니다.
+        - 리팩토링 사유가 명확합니다.
 
-  - type: textarea
-    id: current-code
+  - type: input
+    id: task-target
     attributes:
-      label: 현재 코드 상태
-      description: 리팩토링이 필요한 현재 코드의 상태를 설명해주세요
-      placeholder: 현재 코드의 문제점이나 개선이 필요한 부분을 설명해주세요
+      label: 📄 작업 대상
+      description: 무엇을 대상으로 리팩토링을 진행할 것인지 작성해주세요.
+      placeholder: ex) 사용자 추가 로직
     validations:
       required: true
 
   - type: textarea
-    id: refactor-reason
+    id: task-description
     attributes:
-      label: 리팩토링 이유
-      description: 리팩토링이 필요한 이유를 설명해주세요
+      label: 📄 작업 개요
+      description: 진행 할 리팩토링에 대한 이유와 설명을 작성해주세요.
+      placeholder: ex) 코드 가독성 향상을 위해 코드를 정리합니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-steps
+    attributes:
+      label: 📈 진행 체크리스트
+      description: 어떤 작업을 진행할지 체크리스트 형식으로 작성해주세요. (선택 사항)
       placeholder: |
-        예시:
-        - 코드 가독성 향상
-        - 성능 개선
-        - 유지보수성 향상
-        - 기술 부채 해소
-    validations:
-      required: true
-
-  - type: textarea
-    id: proposed-changes
-    attributes:
-      label: 제안하는 변경사항
-      description: 어떻게 코드를 개선할 계획인지 설명해주세요
-      placeholder: 리팩토링 접근 방식과 예상되는 개선 사항을 설명해주세요
-    validations:
-      required: true
+        - [ ] 작업 1
+        - [ ] 작업 2
 
   - type: textarea
     id: additional-context
     attributes:
-      label: 추가 정보
-      description: 리팩토링에 도움이 될 수 있는 추가 정보를 제공해주세요
+      label: 👍🏻 추가 정보
+      description: 작업을 이해하는 데 도움이 될 스크린샷, 첨부파일, 링크 등 추가 정보를 작성해주세요. (선택 사항)
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 이슈를 생성하기 전에 아래 내용을 확인해주세요:
+        - 제목이 작업의 내용을 잘 표현하고 있습니다.
+        - 작업자를 지정했습니다.
+        - Label이 단 하나만 선택되어 있습니다.
+        - 프로젝트를 연결했습니다.

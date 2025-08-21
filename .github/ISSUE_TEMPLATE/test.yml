@@ -1,71 +1,58 @@
-name: 🧪 Test
-description: 테스트 작성 또는 개선을 위한 템플릿
-title: "[Test] "
+name: ✅ Test
+description: 테스팅 작업을 구성하고, 수행합니다.
+title: "[TEST] "
 labels:
-  - 🧪 test
+  - ✅ test
 body:
   - type: markdown
     attributes:
       value: |
-        ## 테스트 작업
-        테스트 작성 또는 개선에 대한 정보를 작성해주세요.
+        ---
+        ### 이슈를 작성하기 전에 아래 내용을 확인해주세요:
+        - 동일한 작업에 대한 이슈가 없음을 확인했습니다.
+        - 테스팅 목적이 명확합니다.
 
-  - type: dropdown
-    id: test-type
+  - type: input
+    id: task-target
     attributes:
-      label: 테스트 유형
-      description: 작업할 테스트의 유형을 선택해주세요
-      options:
-        - 단위 테스트
-        - 통합 테스트
-        - 성능 테스트
-        - 기타 (아래 설명에 상세히 작성해주세요)
+      label: 📄 테스팅 대상
+      description: 무엇을 대상으로 테스팅을 진행할 것인지 작성해주세요.
+      placeholder: ex) 사용자 추가 DB 관련 로직
+    validations:
+      required: true
+
+  - type: input
+    id: task-description
+    attributes:
+      label: 📄 테스팅 개요
+      description: 테스팅의 목적을 작성해주세요.
+      placeholder: ex) 사용자 정보가 정상적으로 DB에 반영되는 지 확인하기 위함.
     validations:
       required: true
 
   - type: textarea
-    id: description
+    id: task-steps
     attributes:
-      label: 작업 설명
-      description: 테스트 작업에 대해 설명해주세요
-      placeholder: 어떤 테스트를 작성하거나 개선할 예정인지 설명해주세요
+      label: 📈 진행 체크리스트
+      description: 어떤 테스팅 작업을 진행할지 체크리스트 형식으로 작성해주세요.
+      value: |
+        - [ ] 작업 1
+        - [ ] 작업 2
     validations:
       required: true
-
-  - type: textarea
-    id: components-to-test
-    attributes:
-      label: 테스트 대상 컴포넌트
-      description: 테스트할 컴포넌트나 기능을 설명해주세요
-      placeholder: 어떤 컴포넌트나 기능을 테스트할 예정인지 설명해주세요
-    validations:
-      required: true
-
-  - type: textarea
-    id: test-scenarios
-    attributes:
-      label: 테스트 시나리오
-      description: 테스트할 시나리오를 설명해주세요
-      placeholder: |
-        예시:
-        1. 유효한 입력으로 함수 호출 시 예상 결과 반환
-        2. 유효하지 않은 입력으로 함수 호출 시 적절한 오류 발생
-        3. 경계 조건에서의 동작 확인
-    validations:
-      required: true
-
-  - type: textarea
-    id: tasks
-    attributes:
-      label: 작업 목록
-      description: 수행할 테스트 작업 목록을 체크리스트 형식으로 작성해주세요
-      placeholder: |
-        - [ ] 테스트 케이스 설계
-        - [ ] 테스트 코드 작성
-        - [ ] 테스트 실행 및 검증
 
   - type: textarea
     id: additional-context
     attributes:
-      label: 추가 정보
-      description: 테스트 작업에 도움이 될 수 있는 추가 정보를 제공해주세요
+      label: 👍🏻 추가 정보
+      description: 작업을 이해하는 데 도움이 될 스크린샷, 첨부파일, 링크 등 추가 정보를 작성해주세요. (선택 사항)
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 이슈를 생성하기 전에 아래 내용을 확인해주세요:
+        - 제목이 테스팅의 내용을 잘 표현하고 있습니다.
+        - 작업자를 지정했습니다.
+        - Label이 단 하나만 선택되어 있습니다.
+        - 프로젝트를 연결했습니다.
