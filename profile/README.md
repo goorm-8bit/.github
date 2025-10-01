@@ -21,6 +21,10 @@
 모여행은 **함께 계획하고, 함께 즐기는 여행의 시작점**으로,<br>
 사람들을 연결하여 모두가 즐거운 출발점을 만드는 협업 기반 여행 계획 서비스입니다.
 
+### 진행 기간
+- MVP 기획 및 개발 : 2025. 08. 11. ~ 2025. 09. 15.
+- 지속 개선 : 2025. 09. 30. ~ endless
+
 ### 디자인
 <img width="3840" height="2160" alt="design" src="https://github.com/user-attachments/assets/02cccc4e-1d92-4bd6-b9a4-eb67d3a62d70" />
 
